@@ -1,4 +1,5 @@
 {% load static %}
+{% load  tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | MyWebsite</title>
+      {% tailwind_css %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
+     
 </head>
 
-<body>
+<body >
 
-    <nav class="navbar">
+    <nav class="navbar bg-yellow-500" >
         <div class="logo">MyWebsite</div>
         <ul class="nav-links">
             <li><a href="{% url 'home' %}" class="active">Home</a></li>
@@ -24,6 +27,7 @@
         <h1>Welcome to MyWebsite</h1>
         <p>Your trusted place for learning and creating amazing web projects.</p>
         <a href="{% url 'about' %}" class="btn">Learn More</a>
+    
     </section>
 
     <footer>
