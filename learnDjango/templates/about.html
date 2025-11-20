@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | MyWebsite</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}" class="active">About Us</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-section">
+        <h2>About Us</h2>
+        <p>
+            We are a team of passionate developers and designers creating modern,
+            interactive, and user-friendly websites using Django.
+        </p>
+        <p>
+            Our mission is simple — build helpful tools, teach what we learn, and
+            grow together with the community.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2025 MyWebsite — All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
