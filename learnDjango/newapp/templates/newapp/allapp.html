@@ -1,11 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>All types of available apps </h1>
-</body>
-</html>
+
+
+{%  extends "layout.html" %}
+
+{% block title %}
+Chai Page
+{% endblock  %}
+
+{% block content %}
+<h1 class=''>All Chai For You</h1>
+
+<div class="grid grid-cols-3 gap-4 m-4">
+    {% for  chai  in chais  %}
+<div class="">
+    <h2>{{chai.name}}</h2>
+    <p>{{chai.description}}</p>
+  <img class="rounded" src="{{chai.image.url}}" alt="">
+
+</div>
+
+{% endfor %}
+</div>
+{% endblock content %}
+
+

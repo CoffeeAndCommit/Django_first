@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-{% load static %}
-
 <html lang="en">
 <head>
+    {% load static %}
+    {% load tailwind_tags %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- 👇 This is required -->
+    {% tailwind_css %}
 </head>
-<title>
-    {% block title %}
-    
+
+<body class="bg-blue-900 min-h-screen">
+    {% block content %}
     {% endblock %}
-</title>
-<body>
-    
 </body>
 </html>
